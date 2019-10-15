@@ -1,5 +1,7 @@
 package attractions;
 
+import people.Visitor;
+
 public class Playground extends Attraction implements behaviours.ISecurity {
     private int age;
     public Playground(String name, int rating) {
@@ -7,7 +9,7 @@ public class Playground extends Attraction implements behaviours.ISecurity {
         this.age = age;
     }
 
-    public boolean isAllowedTo() {
+    public boolean isAllowedTo(Visitor visitor){
         if (age > 15) {
             return false;
         }

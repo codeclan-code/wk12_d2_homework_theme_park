@@ -1,5 +1,7 @@
 package attractions;
 
+import people.Visitor;
+
 public class RollerCoaster  extends Attraction  implements behaviours.ISecurity, behaviours.ITicketed {
     private int height;
     private int age;
@@ -11,7 +13,7 @@ public class RollerCoaster  extends Attraction  implements behaviours.ISecurity,
     }
 
 
-    public boolean isAllowedTo(){
+    public boolean isAllowedTo(Visitor visitor){
         if (height > 145 && age > 12){
 
         }
